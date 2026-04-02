@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Components (Next.js)
+
+A collection of reusable UI components built with Next.js and Tailwind CSS. This repo is designed as a frontend component playground and examples library for teams to inspect, copy, and integrate into modern React/Next.js applications.
+
+## Included Components
+
+- `accordion` - accessible accordion component with expand/collapse animation
+- `auto-complete` - search suggestions dropdown with keyboard navigation
+- `image-slider` - responsive carousel with swipe and controls
+- `infinite-scroll` - browser-based infinite loading list with loading shimmer
+- `live-chat` - simple chat interface with message rendering and streaming mock
+- `nested-comments` - threaded comments UI with nested replies
+- `pagination` - numeric pagination component with page selection
+- `star-rating` - interactive star rating input
+- `text-expander` - expandable/collapsible preview text component
+
+## Project Structure
+
+- `app/` - Next.js App Router entry points and component pages
+- `app/{component}/` - each component folder includes component implementation and demo page
+- `public/` - static assets
+- `next.config.js`, `tailwind.config.js` - framework config
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Run local dev server:
 
 ```bash
 npm run dev
@@ -12,23 +43,38 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) and navigate to component pages in the app router.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Import component from its folder and use in your Next.js page:
+
+```tsx
+import Accordion from '@/app/accordion/accordion';
+
+export default function Page() {
+  return <Accordion />;
+}
+```
+
+## Contributing
+
+- Add new component demos under `app/`
+- Keep styles in `app/**/*.module.css` or `app/**/*.styles.tsx`
+- Keep implementation simple and reusable
+- Add README updates to document new components
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Works with Vercel, Netlify, or any static hosting provider via Next.js build:
 
-## Deploy on Vercel
+```bash
+npm run build
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
