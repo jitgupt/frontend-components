@@ -6,6 +6,7 @@ export const Container = styled.main`
     justify-content: center;
     align-items: center;
     height: 100vh;
+    gap: 1rem;
 `
 
 export const StyledLink = styled(Link)`
